@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const requestPromise = require('request-promise');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 const OPENWEATHERMAP_API_KEY = 'ad6111536fabfbf8fdc994c25ac0aac5';
 
 app.use(express.json());
