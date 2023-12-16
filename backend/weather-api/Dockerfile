@@ -2,9 +2,10 @@ FROM node:14
 
 WORKDIR /usr/src/weather-api
 
-RUN git clone https://github.com/tiraagst/Weather/tree/master/backend/weather-api .
-
-RUN npm install
+RUN git clone https://github.com/tiraagst/Weather.git . && \
+    git checkout master && \
+    cd backend/weather-api && \
+    npm install
 
 EXPOSE 3000
 
