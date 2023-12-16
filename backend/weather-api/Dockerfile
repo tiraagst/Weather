@@ -7,6 +7,6 @@ RUN git clone https://github.com/tiraagst/Weather.git . && \
     cd backend/weather-api && \
     npm install
 
-EXPOSE 3000
+EXPOSE 8080
 
 CMD ["npm", "start"]
