@@ -1,10 +1,11 @@
 steps:
   - name: 'gcr.io/cloud-builders/github'
     args: ['clone', 'https://github.com/tiraagst/Weather.git', '--branch', 'master', '--depth', '1', 'source']
+    dir: 'source'
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/gantara/weather-api', 'source/backend/weather-api']
-    dir: 'source/backend/weather-api'  # Pindah ke direktori yang sesuai sebelum membangun
+    dir: 'source/backend/weather-api'
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/gantara/weather-api']
